@@ -4,12 +4,16 @@ from django.http import HttpResponse
 # Create your views here.
 def test_view(request):
     print("request:", dir(request))
-    return HttpResponse("""
+    name = "mohammad"
+
+    return HttpResponse(f"""
     <html>
      <head></head>
      <body>
-     Hello World
+     <h1>Hello {name}</h1>
+    <h2>
      This is my first
+     </h2>
       HTML page
      </body>
     </html>
