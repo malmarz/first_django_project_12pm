@@ -5,16 +5,9 @@ from django.http import HttpResponse
 def test_view(request):
     print("request:", dir(request))
     name = "mohammad"
+  
+    c = {}
+    c["username"] = name
+    c["age"] = 40
 
-    return HttpResponse(f"""
-    <html>
-     <head></head>
-     <body>
-     <h1>Hello {name}</h1>
-    <h2>
-     This is my first
-     </h2>
-      HTML page
-     </body>
-    </html>
-    """)
+    return render(request, "template1.html", c)
