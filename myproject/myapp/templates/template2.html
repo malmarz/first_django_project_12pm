@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello 12pm class</h1>
+    <h2>Welcome {{ username }}</h2>
+    <p>Age: {{ age }}</p>
+
+    <a href="http://portal.ku.edu.kw">Google</a> 
+    
+    <h3>CBA Majors:</h3>
+
+    <ol>
+    {% for x in majors %}
+       <li> {{ x }} </li>
+    {% endfor %}
+    </ol>
+
+
+<table>
+    <tr>
+        <th>item 1</th>
+        <th>item 2</th>
+    </tr>
+    <tr>
+        <th>item 3</th>
+        <td>item 4</td>
+    </tr>
+    <tr>
+        <th>item 5</th>
+        <td>item 6</td>
+        <td>item 9</td>
+    </tr>
+    <tr>
+        <td>item 7</td>
+        <td>item 8</td>
+    </tr>
+</table>
+
+</body>
+</html>

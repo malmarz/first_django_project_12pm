@@ -9,5 +9,15 @@ def test_view(request):
     c = {}
     c["username"] = name
     c["age"] = 40
+    c["majors"] = [
+        "MIS",
+        "ORM",
+        "Finance",
+        "Marketing",
+        "Management",
+        "Economics",
+        "Accounting",
+        "Public Admin",
+    ]
 
-    return render(request, "template1.html", c)
+    return render(request, "template2.html", c)
