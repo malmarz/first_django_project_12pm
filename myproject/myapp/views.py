@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 def test_view(request):
-    print("request:", request.GET["pwd"])
+    
   
     c = {}
     c["username"] = request.GET.get('username')
@@ -20,3 +20,17 @@ def test_view(request):
     ]
 
     return render(request, "template2.html", c)
+
+
+def greet_view(request, user=None, a=None):
+    
+    # one way to define the dictionary
+    # d = {}
+    # d["username"] = user
+
+    d = {
+        "username": user,
+        "age": a,
+    }
+
+    return render(request, "greet.html", d)
